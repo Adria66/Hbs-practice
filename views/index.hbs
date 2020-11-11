@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Pagina HBS</h1>
+    <h2>Bienvenido {{name}} {{lastName}}!</h2>
+    {{#if shoppingCart}}
+        <h3>You have some items inside your shopping cart {{numberOfItems}}</h3>
+        {{else}}
+        <h3>Your shopping cart is empty</h3>
+    {{/if}}
+
+    <ol>
+        {{#each shoppingCart}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ol>
+
+    {{#each favouriteBook}}
+        <p>{{@key}}</p>
+    {{/each}}
+ 
+</body>
+</html>
